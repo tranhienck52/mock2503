@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: quickSand;
+  src: url(../src/font/quicksand/Quicksand-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: quickSand;
+  src: url(../src/font/quicksand/Quicksand-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: quickSand;
+  src: url(../src/font/quicksand/Quicksand-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: quickSand;
+  src: url(../src/font/quicksand/Quicksand-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-weight: 400;
+  font-family: quickSand, sans-serif;
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+/* thêm animation/transition cho overlay và hộp pop-up */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.3s ease-out forwards;
+}
