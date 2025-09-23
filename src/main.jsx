@@ -4,11 +4,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LayoutRoot from "./components/LayoutRoot.jsx";
 import Homepage from "./components/Homepage.jsx";
-import LoginForm from "./components/Form/LoginForm.jsx";
-import RegisterForm from "./components/Form/RegisterForm.jsx";
-import ResetPassword from "./components/Form/ResetPassword.jsx";
-import ResetPasswordForm from "./components/Form/RsPassByEmail.jsx";
-import RsPassByEmail from "./components/Form/RsPassByEmail.jsx";
+import LoginForm from "./components/LoginForm/LoginForm.jsx";
+import RegisterForm from "./components/LoginForm/RegisterForm.jsx";
+import ResetPassword from "./components/LoginForm/ResetPassword.jsx";
+import ResetPasswordForm from "./components/LoginForm/ResetPassword.jsx";
+import RsPassByEmail from "./components/LoginForm/RsPassByEmail.jsx";
 import UserInfo from "./components/UserForm/UserInfo.jsx";
 import AddressList from "./components/UserForm/AddressList.jsx";
 import UserPage from "./components/UserForm/UserPage.jsx";
@@ -40,6 +40,14 @@ const router = createBrowserRouter([
         path: "/rspassbyemail",
         element: <RsPassByEmail />,
       },
+      // {
+      //   path: "/request-reset",
+      //   element: <RequestResetPassword />,
+      // },
+      // {
+      //   path: "/resetpass",
+      //   element: <ResetPasswordForm />,
+      // },
       {
         path: "/userPage",
         element: <UserPage />,
